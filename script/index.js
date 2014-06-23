@@ -8,7 +8,7 @@ var APP = APP || {};
             
 			navigator.splashscreen.hide();
             
-            console.log("APP JS works");
+            //console.log("APP JS works");
             
             APP.interaction.init();
             APP.map.init();
@@ -87,7 +87,7 @@ var APP = APP || {};
         },
         matchHeading: function () {
             
-            console.log("matchHeading");
+            //console.log("matchHeading");
 
             APP.settings.placesArray = [];
 			
@@ -152,7 +152,7 @@ var APP = APP || {};
 					if (a == APP.settings.placesArray.length - 1) {
 
 						for (var b = 0; b < APP.settings.placesHeadingArray.length; b++) {
-							console.log(APP.settings.placesHeadingArray[b][0]);
+							// console.log(APP.settings.placesHeadingArray[b][0]);
 
 							if ((APP.settings.currentHeading > (parseInt(APP.settings.placesHeadingArray[b][0]) - 10)) && APP.settings.currentHeading < (parseInt(APP.settings.placesHeadingArray[b][0]) + 10)) {                     				
 								$('#aanwijzing').hide();
@@ -260,6 +260,12 @@ var APP = APP || {};
 			
 			if (APP.settings.locationOpen == 'false') {
 				APP.settings.locationOpen = 'true';
+				
+				// $('#weathertime').hide();				
+				// $('#location').addClass('locationOpen');
+				// $('#arrow-dwn').addClass('pijlbenedenLocationOpen');
+				// $('#loccontent').addClass('localContentLocationOpen');
+
 				
 				$('#weertijd').hide();				
 				$('#location').addClass('locationOpen');
